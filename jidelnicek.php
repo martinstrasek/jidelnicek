@@ -26,7 +26,7 @@ function jidelnicek_dashboard_widget_content() {
     if (isset($_FILES['jidelnicek_file'])) {
       $file = $_FILES['jidelnicek_file'];
       $file_type = wp_check_filetype($_FILES['jidelnicek_file']['name']);
-      $allowed_types = array('pdf'); // Allowed file types
+      $allowed_types = array('pdf', 'PDF'); // Allowed file types
 
       if ($file['error'] === 0 && in_array($file_type['ext'], $allowed_types)) {
           $upload_dir = wp_upload_dir();
